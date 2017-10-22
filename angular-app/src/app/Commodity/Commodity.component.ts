@@ -20,22 +20,20 @@ export class CommodityComponent implements OnInit {
   
       
           tradingSymbol = new FormControl("", Validators.required);
-        
-  
-      
-          description = new FormControl("", Validators.required);
-        
+                
   
       
           mainExchange = new FormControl("", Validators.required);
         
   
       
-          quantity = new FormControl("", Validators.required);
+          amount = new FormControl("", Validators.required);
         
   
       
           owner = new FormControl("", Validators.required);
+
+          reciever = new FormControl("",Validators.required);
         
   
 
@@ -46,21 +44,22 @@ export class CommodityComponent implements OnInit {
         
           tradingSymbol:this.tradingSymbol,
         
-    
-        
-          description:this.description,
-        
+            
     
         
           mainExchange:this.mainExchange,
         
     
         
-          quantity:this.quantity,
+          amount:this.amount,
         
     
         
-          owner:this.owner
+          owner:this.owner,
+
+          reciever:this.reciever
+
+          
         
     
     });
@@ -125,22 +124,20 @@ export class CommodityComponent implements OnInit {
       
         
           "tradingSymbol":this.tradingSymbol.value,
-        
-      
-        
-          "description":this.description.value,
-        
+              
       
         
           "mainExchange":this.mainExchange.value,
         
       
         
-          "quantity":this.quantity.value,
+          "amount":this.amount.value,
         
       
         
-          "owner":this.owner.value
+          "owner":this.owner.value,
+
+          "reciever":this.reciever.value
         
       
     };
@@ -152,19 +149,19 @@ export class CommodityComponent implements OnInit {
         
       
         
-          "description":null,
-        
-      
-        
           "mainExchange":null,
         
       
         
-          "quantity":null,
+          "amount":null,
         
       
         
-          "owner":null
+          "owner":null,
+
+
+          "reciever":null
+
         
       
     });
@@ -177,22 +174,20 @@ export class CommodityComponent implements OnInit {
       
         
           "tradingSymbol":null,
-        
       
-        
-          "description":null,
-        
       
         
           "mainExchange":null,
         
       
         
-          "quantity":null,
+          "amount":null,
         
       
         
-          "owner":null 
+          "owner":null,
+
+          "reciever":null
         
       
       });
@@ -213,12 +208,9 @@ export class CommodityComponent implements OnInit {
       $class: "org.acme.mynetwork.Commodity",
       
         
-          
-        
-    
         
           
-            "description":this.description.value,
+            "tradingSymbol":this.tradingSymbol.value,
           
         
     
@@ -230,13 +222,15 @@ export class CommodityComponent implements OnInit {
     
         
           
-            "quantity":this.quantity.value,
+            "amount":this.amount.value,
           
         
     
         
           
-            "owner":this.owner.value
+            "owner":this.owner.value,
+
+            "vendor":this.reciever.value
           
         
     
@@ -296,21 +290,18 @@ export class CommodityComponent implements OnInit {
           
             "tradingSymbol":null,
           
-        
-          
-            "description":null,
-          
-        
           
             "mainExchange":null,
           
         
           
-            "quantity":null,
+            "amount":null,
           
         
           
-            "owner":null 
+            "owner":null,
+
+            "reciever":null
           
         
       };
@@ -324,15 +315,7 @@ export class CommodityComponent implements OnInit {
           
         }else{
           formObject.tradingSymbol = null;
-        }
-      
-        if(result.description){
-          
-            formObject.description = result.description;
-          
-        }else{
-          formObject.description = null;
-        }
+        }      
       
         if(result.mainExchange){
           
@@ -342,12 +325,12 @@ export class CommodityComponent implements OnInit {
           formObject.mainExchange = null;
         }
       
-        if(result.quantity){
+        if(result.amount){
           
-            formObject.quantity = result.quantity;
+            formObject.amount = result.amount;
           
         }else{
-          formObject.quantity = null;
+          formObject.amount= null;
         }
       
         if(result.owner){
@@ -356,6 +339,11 @@ export class CommodityComponent implements OnInit {
           
         }else{
           formObject.owner = null;
+        }
+        if(result.reciever){
+          formObject.reciever = result.reciever;
+        }else{
+          formObject.reciever = null;
         }
       
 
@@ -381,22 +369,18 @@ export class CommodityComponent implements OnInit {
       
         
           "tradingSymbol":null,
-        
-      
-        
-          "description":null,
-        
       
         
           "mainExchange":null,
         
       
         
-          "quantity":null,
+          "amount":null,
         
       
-        
-          "owner":null 
+          "owner":null, 
+
+          "reciever":null
         
       
       });

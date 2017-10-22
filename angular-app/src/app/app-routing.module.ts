@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { CommodityComponent } from './Commodity/Commodity.component';
-import { AboutComponent } from 'app/about/about.component';
 import { FormComponent } from 'app/form/form.component';
 
 const routes: Routes = [
@@ -12,7 +11,6 @@ const routes: Routes = [
     {path: '', component: HomeComponent},
 		
     { path: 'Commodity', component: CommodityComponent},
-    { path: 'about', component: AboutComponent},
     { path: 'form', component: FormComponent},
 		
 		{path: '**', redirectTo:''}

@@ -4,17 +4,24 @@
 namespace org.acme.mynetwork
 asset Commodity identified by tradingSymbol {
     o String tradingSymbol
-    o String description
     o String mainExchange
-    o Double quantity
+    o Double amount
     --> Trader owner
+    --> Vendor reciever
 }
 participant Trader identified by tradeId {
     o String tradeId
     o String firstName
     o String lastName
+    
+}
+
+participant Vendor identified by vendorId {
+  o String vendorId
+  o String vendorName
+
 }
 transaction Trade {
     --> Commodity commodity
-    --> Trader newOwner
+    --> Vendor newReciever
 }
