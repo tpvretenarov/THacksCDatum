@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 // import { TransactionComponent } from './Transaction/Transaction.component'
 
 import { CommodityComponent } from './Commodity/Commodity.component';
+import { AboutComponent } from './about/about.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CommodityComponent } from './Commodity/Commodity.component';
 		HomeComponent,
     // TransactionComponent,
     
-    CommodityComponent
+    CommodityComponent,
+    AboutComponent,
+    FormComponent
 		
   ],
   imports: [
