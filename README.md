@@ -1,4 +1,4 @@
-# Basic Sample Business Network
+# CDatum, collaborative donation system utilizing Hyperledger fabric's block chain technology.
 
 Demonstrates the core functionality of Hyperledger Composer by changing the value of an asset.
 
